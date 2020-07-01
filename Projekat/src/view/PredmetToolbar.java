@@ -169,12 +169,12 @@ public class PredmetToolbar extends JToolBar {
 					DodavanjeStudentaNaPredmet dialog = new DodavanjeStudentaNaPredmet();
 					dialog.setVisible(true);
 				}
-				else if(TableProfesor.getInstance().getRowCount()==0)
+				else if(TablePredmet.getInstance().getRowCount()==0)
 				{
-					JOptionPane.showMessageDialog(new JFrame(), "Tabela profesora je prazna.\n Molim prvo dodajte predmet.", "Greska!", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(new JFrame(), "Tabela studenata je prazna.\n Molim prvo dodajte predmet.", "Greska!", JOptionPane.ERROR_MESSAGE);
 				}
 				else {
-					JOptionPane.showMessageDialog(new JFrame(), "Potrebno je izabrati predmet u koji želite da upišete profesora", "Greška!", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(new JFrame(), "Potrebno je izabrati predmet u koji želite da upišete studenta", "Greška!", JOptionPane.ERROR_MESSAGE);
 				}
 			}});
 	}

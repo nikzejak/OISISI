@@ -47,6 +47,9 @@ public class MainFrame extends JFrame{
 		profesorToolbar.setFloatable(false);
 		PredmetToolbar predmetToolbar = new PredmetToolbar();
 		predmetToolbar.setFloatable(false);
+		
+		StatusBar statBar = new StatusBar();
+		getContentPane().add(statBar, BorderLayout.SOUTH);
         
         TabbedPane tabbedPane = new TabbedPane();
 		getContentPane().add(tabbedPane, BorderLayout.CENTER);

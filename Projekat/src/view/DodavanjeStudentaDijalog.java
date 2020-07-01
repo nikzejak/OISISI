@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -24,6 +25,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
@@ -75,7 +77,6 @@ import model.StudentskaBaza;
 		
 		private SimpleDateFormat sdf= new SimpleDateFormat("dd/MM/yyyy");
 		
-		
 		public DodavanjeStudentaDijalog(int i,Student s) {
 			
 			Toolkit kit = Toolkit.getDefaultToolkit();
@@ -83,7 +84,11 @@ import model.StudentskaBaza;
 			d = kit.getScreenSize();
 			d.setSize(d.width/3, d.height*3/4);
 			setSize(d);
-		
+			this.setModal(true);
+			this.setResizable(false);
+			this.setLocationRelativeTo(null);
+			getContentPane().setBackground(Color.WHITE);
+			
 			GridBagLayout gridBagLayout = new GridBagLayout();
 			gridBagLayout.columnWidths = new int[] {10};
 			gridBagLayout.rowHeights = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -108,7 +113,7 @@ import model.StudentskaBaza;
 			p1.setLayout(gbl_p1);
 			
 			lIme = new JLabel("Ime*");
-			lIme.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lIme.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 			gbc_lblNewLabel.fill = GridBagConstraints.HORIZONTAL;
 			gbc_lblNewLabel.insets = new Insets(0, 0, 0, 15);
@@ -122,7 +127,7 @@ import model.StudentskaBaza;
 			else
 				tIme= new JTextField(s.getIme());
 			
-			tIme.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			tIme.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			GridBagConstraints gbc_textField = new GridBagConstraints();
 			gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 			gbc_textField.gridx = 1;
@@ -147,7 +152,7 @@ import model.StudentskaBaza;
 			p2.setLayout(gbl_panel_2);
 			
 			lPrezime = new JLabel("Prezime*");
-			lPrezime.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lPrezime.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_lblNewLabel.fill = GridBagConstraints.HORIZONTAL;
 			gbc_lblNewLabel.insets = new Insets(10, 0, 0, 15);
 			gbc_lblNewLabel.gridx = 0;
@@ -160,7 +165,7 @@ import model.StudentskaBaza;
 			else
 				tPrezime= new JTextField(s.getPrezime());
 			
-			tPrezime.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			tPrezime.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 			gbc_lblNewLabel.insets = new Insets(10, 0, 0, 0);
 			gbc_textField.gridx = 1;
@@ -185,7 +190,7 @@ import model.StudentskaBaza;
 			p3.setLayout(gbl_panel_3);
 			
 			lDatum = new JLabel("Datum rodjenja*(dd/MM/yyyy)");
-			lDatum.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lDatum.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_lblNewLabel.anchor = GridBagConstraints.WEST;
 			gbc_lblNewLabel.insets = new Insets(0, 0, 0, 15);
 			gbc_lblNewLabel.gridx = 0;
@@ -198,7 +203,7 @@ import model.StudentskaBaza;
 			else
 				tDatum= new JTextField(sdf.format(s.getDatumRodj()));
 			
-			tDatum.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			tDatum.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 			gbc_textField.gridx = 1;
 			gbc_textField.gridy = 0;
@@ -222,7 +227,7 @@ import model.StudentskaBaza;
 			p4.setLayout(gbl_p4);
 			
 			lAdresa = new JLabel("Adresa stanovanja*");
-			lAdresa.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lAdresa.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_lblNewLabel.anchor = GridBagConstraints.WEST;
 			gbc_lblNewLabel.insets = new Insets(0, 0, 0, 15);
 			gbc_lblNewLabel.gridx = 0;
@@ -234,7 +239,7 @@ import model.StudentskaBaza;
 			else
 				tAdresa= new JTextField(s.getAdresaStanovanja());
 			
-			tAdresa.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			tAdresa.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 			gbc_textField.gridx = 1;
 			gbc_textField.gridy = 0;
@@ -259,7 +264,7 @@ import model.StudentskaBaza;
 			p5.setLayout(gbl_p5);
 			
 			lTelefon = new JLabel("Broj telefona*");
-			lTelefon.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lTelefon.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_lblNewLabel.anchor = GridBagConstraints.WEST;
 			gbc_lblNewLabel.insets = new Insets(0, 0, 0, 15);
 			gbc_lblNewLabel.gridx = 0;
@@ -271,7 +276,7 @@ import model.StudentskaBaza;
 			else
 				tTelefon= new JTextField(s.getTelefon());
 			
-			tTelefon.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			tTelefon.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 			gbc_textField.gridx = 1;
 			gbc_textField.gridy = 0;
@@ -296,7 +301,7 @@ import model.StudentskaBaza;
 			panel_6.setLayout(gbl_panel_6);
 			
 			lblNewLabel_5 = new JLabel("E-mail");
-			lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			GridBagConstraints gbc_lblNewLabel_5 = new GridBagConstraints();
 			gbc_lblNewLabel_5.anchor = GridBagConstraints.WEST;
 			gbc_lblNewLabel_5.insets = new Insets(0, 0, 0, 15);
@@ -310,7 +315,7 @@ import model.StudentskaBaza;
 				textField_5= new JTextField(s.getEmail());
 				textField_5.setEditable(false);
 			}
-			textField_5.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			textField_5.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			GridBagConstraints gbc_textField_5 = new GridBagConstraints();
 			gbc_textField_5.fill = GridBagConstraints.HORIZONTAL;
 			gbc_textField_5.gridx = 1;
@@ -335,7 +340,7 @@ import model.StudentskaBaza;
 			p6.setLayout(gbl_p6);
 			
 			lIndex = new JLabel("Broj indeksa*");
-			lIndex.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lIndex.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_lblNewLabel.anchor = GridBagConstraints.WEST;
 			gbc_lblNewLabel.insets = new Insets(0, 0, 0, 15);
 			gbc_lblNewLabel.gridx = 0;
@@ -350,7 +355,7 @@ import model.StudentskaBaza;
 					tIndex.setEditable(false);
 				}
 			
-			tIndex.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			tIndex.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 			gbc_textField.gridx = 1;
 			gbc_textField.gridy = 0;
@@ -374,7 +379,7 @@ import model.StudentskaBaza;
 			p12.setLayout(gbl_p12);
 			
 			lProsek = new JLabel("Prosecna ocena*");
-			lProsek.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lProsek.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_lblNewLabel.anchor = GridBagConstraints.WEST;
 			gbc_lblNewLabel.insets = new Insets(0, 0, 0, 15);
 			gbc_lblNewLabel.gridx = 0;
@@ -388,7 +393,7 @@ import model.StudentskaBaza;
 					tProsek= new JTextField(s.getProsek().toString());
 				}
 			
-			tProsek.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			tProsek.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 			gbc_textField.gridx = 1;
 			gbc_textField.gridy = 0;
@@ -412,7 +417,7 @@ import model.StudentskaBaza;
 			p7.setLayout(gbl_p7);
 			
 			lGodina = new JLabel("Trenutna godina studiranja*");
-			lGodina.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			lGodina.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			gbc_lblNewLabel.anchor = GridBagConstraints.WEST;
 			gbc_lblNewLabel.insets = new Insets(0, 0, 0, 15);
 			gbc_lblNewLabel.gridx = 0;
@@ -424,7 +429,7 @@ import model.StudentskaBaza;
 			if(i==1)
 				cbGodina.setSelectedItem(s.getGodinaStudija());
 			cbGodina.setBackground(Color.WHITE);
-			cbGodina.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			cbGodina.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			GridBagConstraints gbc_comboBox_1 = new GridBagConstraints();
 			gbc_comboBox_1.fill = GridBagConstraints.HORIZONTAL;
 			gbc_comboBox_1.gridx = 1;
@@ -468,10 +473,10 @@ import model.StudentskaBaza;
 						rbBudzet=new JRadioButton("Budzet",true);
 						rbFinansiranje= new JRadioButton("Samofinansiranje",false);
 					}
-			rbBudzet.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			rbBudzet.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			rbBudzet.setBackground(Color.WHITE);
 
-			rbFinansiranje.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			rbFinansiranje.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			rbFinansiranje.setBackground(Color.WHITE);
 			bg.add(rbBudzet);
 			bg.add(rbFinansiranje);
@@ -503,7 +508,7 @@ import model.StudentskaBaza;
 			JButton btnOdustanak = new JButton("Odustanak");
 			btnOdustanak.setForeground(Color.BLACK);
 			btnOdustanak.setBackground(Color.WHITE);
-			btnOdustanak.setFont(new Font("Tahoma", Font.BOLD, 16));
+			btnOdustanak.setFont(new Font("Tahoma", Font.BOLD, 12));
 			p9.add(btnOdustanak);
 			
 			p10 = new JPanel();
@@ -514,7 +519,7 @@ import model.StudentskaBaza;
 			JButton btnPotvrda = new JButton("Potvrda");
 			btnPotvrda.setForeground(Color.BLACK);
 			btnPotvrda.setBackground(Color.WHITE);
-			btnPotvrda.setFont(new Font("Tahoma", Font.BOLD, 16));
+			btnPotvrda.setFont(new Font("Tahoma", Font.BOLD, 12));
 			p9.add(btnPotvrda);
 			
 			btnOdustanak.addMouseListener(new MouseListener() {
@@ -644,15 +649,8 @@ import model.StudentskaBaza;
 				this.setName("Izmena studenta");
 				this.setTitle("Izmena studenta");
 			}
-				
-			this.setModal(true);
-			this.setResizable(false);
-			this.setLocationRelativeTo(null);
-			getContentPane().setBackground(Color.WHITE);
+		
 		}
 		
-		
-
-	
 	
 }

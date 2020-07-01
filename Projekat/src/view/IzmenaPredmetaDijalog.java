@@ -45,10 +45,10 @@ public class IzmenaPredmetaDijalog extends JDialog{
 			this.setLayout(gbLayout);
 			
 			JLabel sifraLabel = new JLabel("Sifra");
-			sifraLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			sifraLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			
 			JTextField sifraTextField = new JTextField(p.getSifra());
-			sifraTextField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			sifraTextField.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			sifraTextField.setColumns(15);
 			
 			JPanel unosSifre = new JPanel();
@@ -64,10 +64,10 @@ public class IzmenaPredmetaDijalog extends JDialog{
 			this.add(unosSifre, c);
 			
 			JLabel nazivLabel = new JLabel("Naziv");
-			nazivLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			nazivLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			
 			JTextField nazivTextField = new JTextField(p.getNaziv());
-			nazivTextField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			nazivTextField.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			nazivTextField.setColumns(15);
 			
 			JPanel unosNaziva = new JPanel();
@@ -79,7 +79,7 @@ public class IzmenaPredmetaDijalog extends JDialog{
 			this.add(unosNaziva, c);
 			
 			JLabel semestarLabel = new JLabel("Semestar");
-			semestarLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			semestarLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			
 			JComboBox<Semestar> semestarComboBox = new JComboBox<Semestar>(Semestar.values());
 			
@@ -92,7 +92,7 @@ public class IzmenaPredmetaDijalog extends JDialog{
 			this.add(unosSemestra, c);
 			
 			JLabel godinaLabel = new JLabel("Godina Studija");
-			godinaLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+			godinaLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
 			
 			JComboBox<Godina> godinaComboBox = new JComboBox<Godina>(Godina.values());
 			

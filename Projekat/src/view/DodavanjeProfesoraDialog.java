@@ -96,7 +96,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		panel_1.setLayout(gbl_panel_1);
 		
 		JLabel lblNewLabel = new JLabel("Ime");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.fill = GridBagConstraints.HORIZONTAL;
 		gbc_lblNewLabel.insets = new Insets(0, 0, 0, 15);
@@ -109,7 +109,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 			textField = new JTextField();
 		else 
 			textField = new JTextField(profesor.getIme());
-		textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		textField.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_textField = new GridBagConstraints();
 		gbc_textField.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField.gridx = 1;
@@ -133,7 +133,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		panel_2.setLayout(gbl_panel_2);
 		
 		JLabel lblNewLabel_1 = new JLabel("Prezime");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
 		gbc_lblNewLabel_1.anchor = GridBagConstraints.WEST;
 		gbc_lblNewLabel_1.insets = new Insets(0, 0, 0, 15);
@@ -145,7 +145,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 			textField_1 = new JTextField();
 		else 
 			textField_1 = new JTextField(profesor.getPrezime());
-		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		textField_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_textField_1 = new GridBagConstraints();
 		gbc_textField_1.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_1.gridx = 1;
@@ -169,7 +169,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		panel_3.setLayout(gbl_panel_3);
 		
 		JLabel lblNewLabel_2 = new JLabel("Datum rodjenja (dd/mm/yyy)");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_lblNewLabel_2 = new GridBagConstraints();
 		gbc_lblNewLabel_2.anchor = GridBagConstraints.WEST;
 		gbc_lblNewLabel_2.insets = new Insets(0, 0, 0, 15);
@@ -182,7 +182,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		else 
 			textField_2 = new JTextField(sdf.format(profesor.getDatumRodj()));
 		
-		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		textField_2.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_textField_2 = new GridBagConstraints();
 		gbc_textField_2.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_2.gridx = 1;
@@ -206,7 +206,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		panel_4.setLayout(gbl_panel_4);
 		
 		JLabel lblNewLabel_3 = new JLabel("Adresa stanovanja");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
 		gbc_lblNewLabel_3.anchor = GridBagConstraints.WEST;
 		gbc_lblNewLabel_3.insets = new Insets(0, 0, 0, 15);
@@ -218,7 +218,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 			textField_3 = new JTextField();
 		else 
 			textField_3 = new JTextField(profesor.getAdresaStanovanja());
-		textField_3.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		textField_3.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_textField_3 = new GridBagConstraints();
 		gbc_textField_3.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_3.gridx = 1;
@@ -242,7 +242,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		panel_5.setLayout(gbl_panel_5);
 		
 		JLabel lblNewLabel_4 = new JLabel("Telefon");
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_lblNewLabel_4 = new GridBagConstraints();
 		gbc_lblNewLabel_4.anchor = GridBagConstraints.WEST;
 		gbc_lblNewLabel_4.insets = new Insets(0, 0, 0, 15);
@@ -254,7 +254,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 			textField_4 = new JTextField();
 		else 
 			textField_4 = new JTextField(profesor.getTelefon());
-		textField_4.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		textField_4.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_textField_4 = new GridBagConstraints();
 		gbc_textField_4.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_4.gridx = 1;
@@ -278,7 +278,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		panel_6.setLayout(gbl_panel_6);
 		
 		JLabel lblNewLabel_5 = new JLabel("E-mail");
-		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_lblNewLabel_5 = new GridBagConstraints();
 		gbc_lblNewLabel_5.anchor = GridBagConstraints.WEST;
 		gbc_lblNewLabel_5.insets = new Insets(0, 0, 0, 15);
@@ -290,7 +290,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 			textField_5 = new JTextField();
 		else 
 			textField_5 = new JTextField(profesor.getEmail());
-		textField_5.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		textField_5.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_textField_5 = new GridBagConstraints();
 		gbc_textField_5.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_5.gridx = 1;
@@ -314,7 +314,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		panel_7.setLayout(gbl_panel_7);
 		
 		JLabel lblNewLabel_6 = new JLabel("Adresa kancelarije");
-		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_lblNewLabel_6 = new GridBagConstraints();
 		gbc_lblNewLabel_6.anchor = GridBagConstraints.WEST;
 		gbc_lblNewLabel_6.insets = new Insets(0, 0, 0, 15);
@@ -326,7 +326,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 			textField_6 = new JTextField();
 		else 
 			textField_6 = new JTextField(profesor.getAdresaStanovanja());
-		textField_6.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		textField_6.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_textField_6 = new GridBagConstraints();
 		gbc_textField_6.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_6.gridx = 1;
@@ -350,7 +350,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		panel_8.setLayout(gbl_panel_8);
 		
 		JLabel lblNewLabel_7 = new JLabel("Broj licne karte");
-		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_lblNewLabel_7 = new GridBagConstraints();
 		gbc_lblNewLabel_7.anchor = GridBagConstraints.WEST;
 		gbc_lblNewLabel_7.insets = new Insets(0, 0, 0, 15);
@@ -367,7 +367,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 			textField_7.setEditable(false);
 			}
 		
-		textField_7.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		textField_7.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_textField_7 = new GridBagConstraints();
 		gbc_textField_7.fill = GridBagConstraints.HORIZONTAL;
 		gbc_textField_7.gridx = 1;
@@ -391,7 +391,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		panel_9.setLayout(gbl_panel_9);
 		
 		JLabel lblNewLabel_8 = new JLabel("Titula");
-		lblNewLabel_8.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_8.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_lblNewLabel_8 = new GridBagConstraints();
 		gbc_lblNewLabel_8.anchor = GridBagConstraints.WEST;
 		gbc_lblNewLabel_8.insets = new Insets(0, 0, 0, 15);
@@ -402,7 +402,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		comboBox = new JComboBox<Titula>(Titula.values());
 		if(i==1)
 			comboBox.setSelectedItem(profesor.getTitula());
-		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_comboBox = new GridBagConstraints();
 		gbc_comboBox.fill = GridBagConstraints.HORIZONTAL;
 		gbc_comboBox.gridx = 1;
@@ -425,7 +425,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		panel_10.setLayout(gbl_panel_10);
 		
 		JLabel lblNewLabel_9 = new JLabel("Zvanje");
-		lblNewLabel_9.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_9.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_lblNewLabel_9 = new GridBagConstraints();
 		gbc_lblNewLabel_9.anchor = GridBagConstraints.WEST;
 		gbc_lblNewLabel_9.insets = new Insets(0, 0, 0, 15);
@@ -436,7 +436,7 @@ public class DodavanjeProfesoraDialog extends JDialog {
 		comboBox_1 = new JComboBox<Zvanje>(Zvanje.values());
 		if(i==1)
 			comboBox.setSelectedItem(profesor.getZvanje());
-		comboBox_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		comboBox_1.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		GridBagConstraints gbc_comboBox_1 = new GridBagConstraints();
 		gbc_comboBox_1.fill = GridBagConstraints.HORIZONTAL;
 		gbc_comboBox_1.gridx = 1;

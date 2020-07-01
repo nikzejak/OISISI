@@ -37,6 +37,8 @@ public class MainFrame extends JFrame{
         setLocationRelativeTo(null);
         setTitle("Studentska sluzba");
         
+        MenuBar menuBar = new MenuBar();
+		setJMenuBar(menuBar);
         
         TabbedPane tabbedPane = new TabbedPane();
 		getContentPane().add(tabbedPane, BorderLayout.CENTER);

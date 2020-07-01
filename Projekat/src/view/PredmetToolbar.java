@@ -90,8 +90,8 @@ public class PredmetToolbar extends JToolBar {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if(!TablePredmet.getInstance().getSelectionModel().isSelectionEmpty()) {	
-					//DodavanjeProfesoraNaPredmet dialog = new DodavanjeProfesoraNaPredmet();
-					//dialog.setVisible(true);
+					DodavanjeProfesoraNaPredmet dialog = new DodavanjeProfesoraNaPredmet();
+					dialog.setVisible(true);
 				}else {
 					JOptionPane.showMessageDialog(new JFrame(), "Potrebno je izabrati predmet u koji želite da upišete profesora", "Greška!", JOptionPane.ERROR_MESSAGE);
 				}
@@ -142,8 +142,8 @@ public class PredmetToolbar extends JToolBar {
 					int rowIndex = TablePredmet.getInstance().convertRowIndexToModel(TablePredmet.getInstance().getSelectedRow());
 					Predmet predmet = PredmetskaBaza.getInstance().getRow(rowIndex);
 					
-					//DodavanjeStudentaNaPredmet dialog = new DodavanjeStudentaNaPredmet();
-					//dialog.setVisible(true);
+					DodavanjeStudentaNaPredmet dialog = new DodavanjeStudentaNaPredmet();
+					dialog.setVisible(true);
 				}
 				else if(TableProfesor.getInstance().getRowCount()==0)
 				{

@@ -16,6 +16,8 @@ import javax.swing.JToolBar;
 import controller.ControllerPredmet;
 import model.Predmet;
 import model.PredmetskaBaza;
+import model.Student;
+import model.StudentskaBaza;
 
 public class PredmetToolbar extends JToolBar {
 	
@@ -54,6 +56,11 @@ public class PredmetToolbar extends JToolBar {
 		addStudentUPredmetBtn.setIcon(new ImageIcon("images/add2.jpg"));
 		addStudentUPredmetBtn.setToolTipText("Dodavanje studenta na predmet");
 		panel.add(addStudentUPredmetBtn);
+		
+		JButton deleteStudentaSaPredmetaBtn = new JButton("");
+		deleteStudentaSaPredmetaBtn.setIcon(new ImageIcon("images/delete3.png"));
+		deleteStudentaSaPredmetaBtn.setToolTipText("Brisanje studenta sa predmeta");
+		panel.add(deleteStudentaSaPredmetaBtn);
 		
 		
 		addPredmetBtn.addActionListener(new ActionListener() {
@@ -127,6 +134,23 @@ public class PredmetToolbar extends JToolBar {
 					}else {
 						JOptionPane.showMessageDialog(new JFrame(), "Predmet nema profesora", "Greška!", JOptionPane.ERROR_MESSAGE);
 					}
+				}else {
+					JOptionPane.showMessageDialog(new JFrame(), "Potrebno je izabrati predmet iz kojeg želite da obrišete profesora", "Greška!", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		});
+		
+		deleteStudentaSaPredmetaBtn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				if(!TablePredmet.getInstance().getSelectionModel().isSelectionEmpty()) {
+					int rowIndex = TablePredmet.getInstance().convertRowIndexToModel(TablePredmet.getInstance().getSelectedRow());
+					Predmet predmet = PredmetskaBaza.getInstance().getRow(rowIndex);
+					Student student = StudentskaBaza.getInstance().getRow(rowIndex);
+					
+					
 				}else {
 					JOptionPane.showMessageDialog(new JFrame(), "Potrebno je izabrati predmet iz kojeg želite da obrišete profesora", "Greška!", JOptionPane.ERROR_MESSAGE);
 				}

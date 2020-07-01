@@ -7,7 +7,7 @@ public class App {
 
 	 public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
 		 
-		 UIManager.setLookAndFeel("de.javasoft.plaf.synthetica.SyntheticaPlainLookAndFeel");
+		 //UIManager.setLookAndFeel("de.javasoft.plaf.synthetica.SyntheticaPlainLookAndFeel");
 		 
 		 MainFrame.getInstance().setVisible(true);
 	 }

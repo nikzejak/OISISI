@@ -39,6 +39,14 @@ public class MainFrame extends JFrame{
         
         MenuBar menuBar = new MenuBar();
 		setJMenuBar(menuBar);
+		
+		StudentToolbar studentToolbar = new StudentToolbar();
+		studentToolbar.setFloatable(false);
+		add(studentToolbar, BorderLayout.NORTH);
+		ProfesorToolbar profesorToolbar = new ProfesorToolbar();
+		profesorToolbar.setFloatable(false);
+		PredmetToolbar predmetToolbar = new PredmetToolbar();
+		predmetToolbar.setFloatable(false);
         
         TabbedPane tabbedPane = new TabbedPane();
 		getContentPane().add(tabbedPane, BorderLayout.CENTER);
@@ -51,22 +59,22 @@ public class MainFrame extends JFrame{
 				int tab = tabbedPane.getSelectedIndex();
 				menuBar.setTab(tab);
 				if(tab == 0) {
-//					getContentPane().add(studentToolbar,  BorderLayout.NORTH);
-//					studentToolbar.show();
-//					profesorToolbar.hide();
-//					predmetToolbar.hide();
+					getContentPane().add(studentToolbar,  BorderLayout.NORTH);
+					studentToolbar.show();
+					profesorToolbar.hide();
+					predmetToolbar.hide();
 				}
 				else if(tab == 1) {
-//					add(profesorToolbar, BorderLayout.NORTH);
-//					studentToolbar.hide();
-//					profesorToolbar.show();
-//					predmetToolbar.hide();
+					add(profesorToolbar, BorderLayout.NORTH);
+					studentToolbar.hide();
+					profesorToolbar.show();
+					predmetToolbar.hide();
 				}
 				else {
-//					add(predmetToolbar, BorderLayout.NORTH);
-//					studentToolbar.hide();
-//					profesorToolbar.hide();
-//					predmetToolbar.show();
+					add(predmetToolbar, BorderLayout.NORTH);
+					studentToolbar.hide();
+					profesorToolbar.hide();
+					predmetToolbar.show();
 				}
 				
 			}

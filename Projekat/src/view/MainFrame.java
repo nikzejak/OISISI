@@ -43,6 +43,35 @@ public class MainFrame extends JFrame{
         TabbedPane tabbedPane = new TabbedPane();
 		getContentPane().add(tabbedPane, BorderLayout.CENTER);
 		
+		tabbedPane.addChangeListener(new ChangeListener() {
+			
+			@SuppressWarnings("deprecation")
+			@Override
+			public void stateChanged(ChangeEvent e) {		
+				int tab = tabbedPane.getSelectedIndex();
+				menuBar.setTab(tab);
+				if(tab == 0) {
+//					getContentPane().add(studentToolbar,  BorderLayout.NORTH);
+//					studentToolbar.show();
+//					profesorToolbar.hide();
+//					predmetToolbar.hide();
+				}
+				else if(tab == 1) {
+//					add(profesorToolbar, BorderLayout.NORTH);
+//					studentToolbar.hide();
+//					profesorToolbar.show();
+//					predmetToolbar.hide();
+				}
+				else {
+//					add(predmetToolbar, BorderLayout.NORTH);
+//					studentToolbar.hide();
+//					profesorToolbar.hide();
+//					predmetToolbar.show();
+				}
+				
+			}
+		});
+		
 		this.addWindowListener(new WindowListener() {
 			
 			@Override

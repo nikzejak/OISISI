@@ -80,5 +80,12 @@ public class Predmet implements Serializable{
 		this.studenti = studenti;
 	}
 	
+	public void dodajStudenta(Student s) {
+		this.studenti.add(s);
+	}
+	
+	public void ukloniStudenta(Student s) {
+		this.studenti.remove(s);
+	}
 	
 }

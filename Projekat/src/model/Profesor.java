@@ -129,5 +129,13 @@ public class Profesor implements Serializable{
 		this.predmeti = predmeti;
 	}
 	
+	public void izbrisiPredmet(String sifra) {
+		for(Predmet p : predmeti) {
+			if(p.getSifra().equals(sifra)) {
+				predmeti.remove(p);
+				break;
+			}
+		}
+	}
 	
 }

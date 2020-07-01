@@ -37,8 +37,7 @@ public class Student implements Serializable{
 	}
 	
 	public Student(String ime, String prezime, Date datumRodj, String adresaStanovanja, String telefon, String email,
-			String indeks, Date datumUpisa, Godina godinaStudija, Status status, Double prosek,
-			ArrayList<Predmet> predmeti) {
+			String indeks, Date datumUpisa, Godina godinaStudija, Status status, Double prosek) {
 		super();
 		this.ime = ime;
 		this.prezime = prezime;
@@ -51,7 +50,7 @@ public class Student implements Serializable{
 		this.godinaStudija = godinaStudija;
 		this.status = status;
 		this.prosek = prosek;
-		this.predmeti = predmeti;
+		predmeti = new ArrayList<Predmet>();
 	}
 	
 	Student(Student s){
@@ -143,6 +142,12 @@ public class Student implements Serializable{
 		this.predmeti = predmeti;
 	}
 	
+	public Boolean dodajPredmet(Predmet predmet) {
+		return predmeti.add(predmet);
+	}
 	
+	public Boolean ukloniPredmet(Predmet predmet) {
+		return predmeti.remove(predmet);
+	}
 	
 }
